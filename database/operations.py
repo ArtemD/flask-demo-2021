@@ -13,3 +13,11 @@ def insert(name, address, postcode, city, date, type, business_id):
     id = new_row.id
     db.close()
     return id
+
+def search(keyword):
+    return __get_session().query(License).filter(or_(
+        License.name.ilike(f'%{keyword}%'), 
+        License.business_id.ilike(f'%{keyword}%')))
+
+def get():
+    return __get_session().query(License).all()
