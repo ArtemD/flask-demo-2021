@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% block title %}Insert new data into database{% endblock %}
+{% block body %}
+<form action="/submit" method="POST">
+    <label for="name">Business name: </label>
+    <input type="text" name="name" /><br />
+    
+    <label for="address">Business address: </label>
+    <input type="text" name="address" /><br />
+
+    <label for="postcode">Address postcode: </label>
+    <input type="text" name="postcode" /><br />
+
+    <label for="city">City</label>
+    <input type="text" name="city" /><br />
+
+    <label for="date">When was license granted (date): </label>
+    <input type="text" name="date" /><br />
+
+    <label for="type">License type: </label>
+    <input type="text" name="type" /><br />
+
+    <label for="businessid">Business ID: </label>
+    <input type="text" name="businessid" /><br />
+
+    <input type="submit" name="submit" value="Submit">
+</form>
+{% endblock %}

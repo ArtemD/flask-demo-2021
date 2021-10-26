@@ -4,6 +4,22 @@ from api import get_json
 
 app = Flask(__name__)
 
+@app.route('/form')
+def form():
+    return render_template('form.html')
+
+@app.route('/submit', methods=['GET', 'POST'])
+def submit():
+    if request.method=='GET':
+        redirect('/form')
+    else:
+        if insert(request.form['name'], request.form['address'], request.form['postcode'], 
+                request.form['city'],request.form['date'], request.form['type'], 
+                request.form['businessid']):
+            return "Data inserted"
+        else:
+            return "Data not inserted"
+
 @app.route('/')
 def index():
     return render_template('front-page.html')

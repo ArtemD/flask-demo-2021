@@ -9,6 +9,7 @@ python-dotenv = "*"
 termcolor = "*"
 tqdm = "*"
 flask = "*"
+pdoc3 = "*"
 
 [dev-packages]
 
