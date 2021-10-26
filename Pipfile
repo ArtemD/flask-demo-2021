@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 sqlalchemy = "*"
 python-dotenv = "*"
+termcolor = "*"
+tqdm = "*"
 
 [dev-packages]
 
