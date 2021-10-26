@@ -4,7 +4,7 @@ Simple project powered by Flask/Python/SQLAlchemy for displaying alchohol licens
 
 ## Installation
 
-Make sure you have Python 3.X installed as well as pipenv.
+Make sure you have Python 3.X installed as well as pipenv. Make sure to create .env file in your project directory (check .env_example for example content).
 
 ```bash
   pipenv install
