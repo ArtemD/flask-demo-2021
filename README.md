@@ -14,12 +14,7 @@ Make sure you have Python 3.X installed as well as pipenv. Make sure to create .
     
 ## Deployment
 
-TODO
-
-```bash
-  
-```
-
+Application has support for Heroku deployment (gunicorn).
   
 ## Authors
 
