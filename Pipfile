@@ -10,6 +10,8 @@ termcolor = "*"
 tqdm = "*"
 flask = "*"
 pdoc3 = "*"
+psycopg2-binary = "*"
+gunicorn = "*"
 
 [dev-packages]
 
