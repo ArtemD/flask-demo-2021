@@ -4,6 +4,16 @@ import database
 from database.operations import search, get
 
 def __generate_json(results):
+    """
+    Used to generate valid Flask JSON response from db results 
+    
+        Parameters:
+            results (object): Database results
+        
+        Returns:
+            response (object): Flask response object
+
+    """
     data = []
     line = 0
 

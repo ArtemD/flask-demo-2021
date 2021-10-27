@@ -13,7 +13,20 @@ Base = declarative_base()
 
 class License(Base):
     """
-    License table object
+    License for storing alcohol licenses
+
+    Attributes
+    ----------
+    id : object
+        Table primary key
+    name: object
+        License place name
+
+    Methods
+    -------
+    name():
+        Returns object's name variable
+
     """
     __tablename__ = 'licenses'
 
@@ -26,6 +39,9 @@ class License(Base):
     license_type = Column(String(255))
     business_id = Column(String(255))
     created_at = Column(DateTime, default=datetime.utcnow())
+
+    def get_name(self):
+        return self.name
 
     def __repr__(self):
         """ String representation of the object """

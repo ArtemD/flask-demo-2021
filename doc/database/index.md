@@ -9,7 +9,19 @@ Classes
 -------
 
 `License(**kwargs)`
-:   License table object
+:   License for storing alcohol licenses
+    
+    Attributes
+    ----------
+    id : object
+        Table primary key
+    name: object
+        License place name
+    
+    Methods
+    -------
+    name():
+        Returns object's name variable
     
     A simple constructor that allows initialization from kwargs.
     
@@ -51,4 +63,9 @@ Classes
     :
 
     `postcode`
+    :
+
+    ### Methods
+
+    `get_name(self)`
     :
