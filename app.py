@@ -6,12 +6,13 @@ app = Flask(__name__)
 
 @app.route('/form')
 def form():
+    """ Display submission form """
     return render_template('form.html')
 
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
     if request.method=='GET':
-        redirect('/form')
+        return redirect('/form')
     else:
         if insert(request.form['name'], request.form['address'], request.form['postcode'], 
                 request.form['city'],request.form['date'], request.form['type'], 
