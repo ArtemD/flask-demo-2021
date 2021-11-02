@@ -1,5 +1,6 @@
 import os
-os.rename('.env_test', '.env')
+if os.path.exists('.env') == False:
+    os.rename('.env_test', '.env')
 
 import pytest
 from app import app
