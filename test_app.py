@@ -47,7 +47,7 @@ def test_submit_invalid_data(client):
         'businessid': '234234-2'
     }
     result = client.post('/submit', data=data)
-    assert result.status_code == 401
+    assert result.status_code == 400
 
 def test_api_all(client):
     result = client.get('/api/all')
