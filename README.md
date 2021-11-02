@@ -11,7 +11,18 @@ Make sure you have Python 3.X installed as well as pipenv. Make sure to create .
   pipenv shell
   python app.py
 ```
-    
+
+## Running tests
+
+You can run unit tests found in test_app.py using following commands:
+
+```bash
+  pipenv install
+  pipenv shell
+  pytest
+```
+
+
 ## Deployment
 
 Application has support for Heroku deployment (gunicorn).
