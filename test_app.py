@@ -4,9 +4,9 @@ from create_db import create_db
 import os
 
 @pytest.fixture
-def client():    
+def client():
     
-    os.environ['DATABASE_URL']='sqlite:///database.db'
+    os.rename('.env_test', '.env')
 
     if os.path.exists('database.db') == False:
         create_db()
