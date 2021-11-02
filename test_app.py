@@ -1,13 +1,13 @@
+import os
+os.rename('.env_test', '.env')
+
 import pytest
 from app import app
 from create_db import create_db
-import os
 
 @pytest.fixture
 def client():
     
-    os.rename('.env_test', '.env')
-
     if os.path.exists('database.db') == False:
         create_db()
     
